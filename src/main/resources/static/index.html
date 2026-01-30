@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MaxAB - Employee Onboarding</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <header class="brand-header">
+        <img src="logo.png" alt="MaxAB Logo" class="brand-logo">
+        <h1>Employee Onboarding</h1>
+        <p>Please complete all required fields to join the team</p>
+    </header>
+
+    <div id="statusAlert" class="alert"></div>
+
+    <form id="onboardingForm" enctype="multipart/form-data">
+
+        <div class="form-card">
+            <div class="section-header">
+                <h2>Personal Information</h2>
+            </div>
+            <div class="form-grid">
+                <div class="form-group">
+                    <label for="nationalId">National ID <span class="required">*</span></label>
+                    <input type="text" id="nationalId" name="nationalId" required>
+                </div>
+                <div class="form-group">
+                    <label for="nationalIdExpiryDate">National ID Expiry Date <span class="required">*</span></label>
+                    <input type="date" id="nationalIdExpiryDate" name="nationalIdExpiryDate" required>
+                </div>
+                <div class="form-group">
+                    <label for="fullNameArabic">Full Name (Arabic) <span class="required">*</span></label>
+                    <input type="text" id="fullNameArabic" name="fullNameArabic" required>
+                </div>
+                <div class="form-group">
+                    <label for="fullNameEnglish">Full Name (English) <span class="required">*</span></label>
+                    <input type="text" id="fullNameEnglish" name="fullNameEnglish" required>
+                </div>
+                <div class="form-group">
+                    <label for="gender">Gender <span class="required">*</span></label>
+                    <select id="gender" name="gender" required>
+                        <option value="">Select Gender</option>
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="maritalStatus">Marital Status <span class="required">*</span></label>
+                    <select id="maritalStatus" name="maritalStatus" required>
+                        <option value="">Select Status</option>
+                        <option value="Single">Single</option>
+                        <option value="Married">Married</option>
+                        <option value="Divorced">Divorced</option>
+                        <option value="Widowed">Widowed</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="dateOfBirth">Date of Birth <span class="required">*</span></label>
+                    <input type="date" id="dateOfBirth" name="dateOfBirth" required>
+                </div>
+                <div class="form-group">
+                    <label for="placeOfBirth">Place of Birth</label>
+                    <input type="text" id="placeOfBirth" name="placeOfBirth">
+                </div>
+                <div class="form-group">
+                    <label for="religion">Religion</label>
+                    <input type="text" id="religion" name="religion">
+                </div>
+                <div class="form-group">
+                    <label for="mobileNumber">Mobile Number <span class="required">*</span></label>
+                    <input type="tel" id="mobileNumber" name="mobileNumber" required>
+                </div>
+                <div class="form-group full-width">
+                    <label for="recommendedEmail">Recommended Email <span class="required">*</span></label>
+                    <input type="email" id="recommendedEmail" name="recommendedEmail" required>
+                </div>
+                <div class="form-group full-width">
+                    <label for="fullAddress">Full Address</label>
+                    <textarea id="fullAddress" name="fullAddress" rows="2"></textarea>
+                </div>
+                <div class="form-group full-width">
+                    <label for="currentAddress">Current Address</label>
+                    <textarea id="currentAddress" name="currentAddress" rows="2"></textarea>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-card">
+            <div class="section-header">
+                <h2>Identification & Legal Documents</h2>
+            </div>
+            <div class="form-grid">
+                <div class="form-group">
+                    <label for="personalPhoto">Personal Photo</label>
+                    <input type="file" id="personalPhoto" name="personalPhoto" accept="image/*">
+                </div>
+                <div class="form-group">
+                    <label for="nationalIdFront">National ID (Front)</label>
+                    <input type="file" id="nationalIdFront" name="nationalIdFront" accept="image/*,.pdf">
+                </div>
+                <div class="form-group">
+                    <label for="nationalIdBack">National ID (Back)</label>
+                    <input type="file" id="nationalIdBack" name="nationalIdBack" accept="image/*,.pdf">
+                </div>
+                <div class="form-group">
+                    <label for="criminalRecord">Criminal Record</label>
+                    <input type="file" id="criminalRecord" name="criminalRecord" accept=".pdf,image/*">
+                </div>
+                <div class="form-group full-width">
+                    <label for="birthCertificate">Birth Certificate</label>
+                    <input type="file" id="birthCertificate" name="birthCertificate" accept=".pdf,image/*">
+                </div>
+            </div>
+        </div>
+
+        <div class="form-card">
+            <div class="section-header">
+                <h2>Education Details</h2>
+            </div>
+            <div class="form-grid">
+                <div class="form-group">
+                    <label for="universityName">University Name</label>
+                    <input type="text" id="universityName" name="universityName">
+                </div>
+                <div class="form-group">
+                    <label for="faculty">Faculty</label>
+                    <input type="text" id="faculty" name="faculty">
+                </div>
+                <div class="form-group">
+                    <label for="graduationYear">Graduation Year</label>
+                    <input type="number" id="graduationYear" name="graduationYear" min="1950" max="2030">
+                </div>
+                <div class="form-group">
+                    <label for="lastQualification">Last Qualification Obtained</label>
+                    <input type="text" id="lastQualification" name="lastQualification">
+                </div>
+                <div class="form-group">
+                    <label for="graduationCertificate">Graduation Certificate</label>
+                    <input type="file" id="graduationCertificate" name="graduationCertificate" accept=".pdf,image/*">
+                </div>
+                <div class="form-group">
+                    <label for="proofOfRegistration">Proof of Registration</label>
+                    <input type="file" id="proofOfRegistration" name="proofOfRegistration" accept=".pdf,image/*">
+                </div>
+            </div>
+        </div>
+
+        <div class="form-card">
+            <div class="section-header">
+                <h2>Employment & Financial Information</h2>
+            </div>
+            <div class="form-grid">
+                <div class="form-group">
+                    <label for="cibAccountNumber">CIB Account Number</label>
+                    <input type="text" id="cibAccountNumber" name="cibAccountNumber">
+                </div>
+                <div class="form-group">
+                    <label for="socialInsuranceNumber">Social Insurance Number</label>
+                    <input type="text" id="socialInsuranceNumber" name="socialInsuranceNumber">
+                </div>
+            </div>
+        </div>
+
+        <div class="form-card">
+            <div class="section-header">
+                <h2>Military & Professional Syndicate</h2>
+            </div>
+            <div class="form-grid">
+                <div class="form-group">
+                    <label for="militaryStatus">Military Status (Males Only)</label>
+                    <select id="militaryStatus" name="militaryStatus">
+                        <option value="">Select Status</option>
+                        <option value="Completed">Completed</option>
+                        <option value="Exempted">Exempted</option>
+                        <option value="Postponed">Postponed</option>
+                        <option value="N/A">N/A</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="militaryCertificate">Military Certificate</label>
+                    <input type="file" id="militaryCertificate" name="militaryCertificate">
+                </div>
+                <div class="form-group full-width">
+                    <label for="syndicateCard">Syndicate Card (If Applicable)</label>
+                    <input type="file" id="syndicateCard" name="syndicateCard">
+                </div>
+            </div>
+        </div>
+
+        <div class="form-card">
+            <div class="section-header">
+                <h2>Emergency Contacts</h2>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-sub-card">
+                    <h3>Primary Contact</h3>
+                    <div class="form-group">
+                        <label>Name</label>
+                        <input type="text" name="primaryContact.name">
+                    </div>
+                    <div class="form-group" style="margin-top:10px">
+                        <label>Relationship</label>
+                        <input type="text" name="primaryContact.relationship">
+                    </div>
+                    <div class="form-group" style="margin-top:10px">
+                        <label>Contact Number</label>
+                        <input type="tel" name="primaryContact.contactNumber">
+                    </div>
+                </div>
+                <div class="contact-sub-card">
+                    <h3>Secondary Contact</h3>
+                    <div class="form-group">
+                        <label>Name</label>
+                        <input type="text" name="secondaryContact.name">
+                    </div>
+                    <div class="form-group" style="margin-top:10px">
+                        <label>Relationship</label>
+                        <input type="text" name="secondaryContact.relationship">
+                    </div>
+                    <div class="form-group" style="margin-top:10px">
+                        <label>Contact Number</label>
+                        <input type="tel" name="secondaryContact.contactNumber">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <button type="submit" class="btn-submit" id="submitBtn">Submit Onboarding Form</button>
+    </form>
+</div>
+
+<script>
+    document.getElementById('onboardingForm').addEventListener('submit', async (e) => {
+        e.preventDefault();
+        const form = e.target;
+        const btn = document.getElementById('submitBtn');
+        const alert = document.getElementById('statusAlert');
+        const formData = new FormData(form);
+
+        btn.disabled = true;
+        btn.innerText = "Submitting Data...";
+        alert.className = "alert"; // Hide alert
+
+        try {
+            const response = await fetch('http://localhost:8080/api/onboarding', {
+                method: 'POST',
+                body: formData
+            });
+            const data = await response.json();
+
+            if (data.success) {
+                // Redirect to success page with submission details
+                window.location.href = `/success.html?recordId=${data.recordId}&nationalId=${data.nationalId}`;
+            } else {
+                // Show error message
+                alert.innerText = "Error: " + data.message;
+                alert.className = "alert error";
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            }
+        } catch (error) {
+            alert.innerText = "Error: " + error.message;
+            alert.className = "alert error";
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        } finally {
+            btn.disabled = false;
+            btn.innerText = "Submit Onboarding Form";
+        }
+    });
+</script>
+
+</body>
+</html>
