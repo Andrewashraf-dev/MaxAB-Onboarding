@@ -84,3 +84,12 @@ Unauthorized use, reproduction, modification, or distribution of this project, i
 This project is shared publicly for demonstration and educational purposes only.
 
 © 2026 Andrew Ashraf. All rights reserved.
+
+## Screenshots
+
+### Employee Onboarding Form
+![Onboarding Form](screenshots/1.png)
+![Onboarding Form](screenshots/2.png)
+![Onboarding Form](screenshots/3.png)
+![Onboarding Form](screenshots/4.png)
+
